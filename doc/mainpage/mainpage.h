@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver GT30L32S4W
- * @brief     libdriver gt30l32s4w is a full function driver of gt30l32s4w and it can run in both MCU and Linux platform.
+ * @brief     LibDriver GT30L32S4W is a full function driver of GT30L32S4W and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
