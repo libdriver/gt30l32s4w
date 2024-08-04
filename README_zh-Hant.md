@@ -10,7 +10,7 @@
 
 GT30L32S4W是一款內含12x12點陣、16x16點陣、24x24點陣、32x32點陣的漢字庫晶片，支持GB2312國標漢字（含有國家信標委合法授權）及ASCII字元。 排列格式為橫置橫排。 用戶通過字元內碼，利用本手册提供的方法計算出該字元點陣在晶片中的地址，可從該地址連續讀出字元點陣資訊。
 
-LibDriver GT30L32S4W是LibDriver推出的GT30L32S4W全功能驅動程序，提供字元點陣讀取功能。 LibDriver符合MISRA。
+LibDriver GT30L32S4W是LibDriver推出的GT30L32S4W全功能驅動程序，提供字元點陣讀取等功能。 LibDriver符合MISRA。
 
 ### 目錄
 
