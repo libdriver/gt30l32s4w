@@ -99,9 +99,9 @@ uint8_t gt30l32s4w_basic_deinit(void)
 
 /**
  * @brief     basic example print pattern
- * @param[in] type is the pattern type
- * @param[in] *buf points to an input buffer
- * @param[in] len is the buffer length
+ * @param[in] type pattern type
+ * @param[in] *buf pointer to an input buffer
+ * @param[in] len buffer length
  * @return    status code
  *            - 0 success
  *            - 1 print pattern failed
@@ -120,9 +120,9 @@ uint8_t gt30l32s4w_basic_print_pattern(gt30l32s4w_type_t type, uint8_t *buf, uin
 
 /**
  * @brief      basic example read 12
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
- * @param[out] *len points to a length buffer
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
+ * @param[out] *len pointer to a length buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 12 failed
@@ -180,9 +180,9 @@ uint8_t gt30l32s4w_basic_read_12(uint16_t ch, uint8_t buf[24], uint8_t *len)
 
 /**
  * @brief      basic example read 16
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
- * @param[out] *len points to a length buffer
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
+ * @param[out] *len pointer to a length buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 16 failed
@@ -251,9 +251,9 @@ uint8_t gt30l32s4w_basic_read_16(uint16_t ch, uint8_t buf[32], uint8_t *len)
 
 /**
  * @brief      basic example read 24
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
- * @param[out] *len points to a length buffer
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
+ * @param[out] *len pointer to a length buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 24 failed
@@ -311,9 +311,9 @@ uint8_t gt30l32s4w_basic_read_24(uint16_t ch, uint8_t buf[72], uint8_t *len)
 
 /**
  * @brief      basic example read 32
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
- * @param[out] *len points to a length buffer
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
+ * @param[out] *len pointer to a length buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 32 failed
@@ -371,8 +371,8 @@ uint8_t gt30l32s4w_basic_read_32(uint16_t ch, uint8_t buf[128], uint8_t *len)
 
 /**
  * @brief      read ascii 7
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 7 failed
@@ -391,8 +391,8 @@ uint8_t gt30l32s4w_basic_read_ascii_7(uint16_t ch, uint8_t buf[8])
 
 /**
  * @brief      read ascii 8
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 8 failed
@@ -411,9 +411,9 @@ uint8_t gt30l32s4w_basic_read_ascii_8(uint16_t ch, uint8_t buf[8])
 
 /**
  * @brief      read ascii 12 with length
- * @param[in]  type is the output type
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  type output type
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 12 with length failed
@@ -445,9 +445,9 @@ uint8_t gt30l32s4w_basic_read_ascii_12_with_length(gt30l32s4w_basic_type_t type,
 
 /**
  * @brief      read ascii 16 with length
- * @param[in]  type is the output type
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  type output type
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 16 with length failed
@@ -479,9 +479,9 @@ uint8_t gt30l32s4w_basic_read_ascii_16_with_length(gt30l32s4w_basic_type_t type,
 
 /**
  * @brief      read ascii 24 with length
- * @param[in]  type is the output type
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  type output type
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 24 with length failed
@@ -513,9 +513,9 @@ uint8_t gt30l32s4w_basic_read_ascii_24_with_length(gt30l32s4w_basic_type_t type,
 
 /**
  * @brief      read ascii 32 with length
- * @param[in]  type is the output type
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  type output type
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 32 with length failed

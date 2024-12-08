@@ -70,10 +70,10 @@ uint8_t gt30l32s4w_interface_spi_deinit(void);
 
 /**
  * @brief      interface spi bus write read
- * @param[in]  *in_buf points to an input buffer
- * @param[in]  in_len is the input buffer length
- * @param[out] *out_buf points to an output buffer
- * @param[in]  out_len is the output buffer length
+ * @param[in]  *in_buf pointer to an input buffer
+ * @param[in]  in_len input buffer length
+ * @param[out] *out_buf pointer to an output buffer
+ * @param[in]  out_len output buffer length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
@@ -83,14 +83,14 @@ uint8_t gt30l32s4w_interface_spi_write_read(uint8_t *in_buf, uint32_t in_len, ui
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void gt30l32s4w_interface_delay_ms(uint32_t ms);
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void gt30l32s4w_interface_debug_print(const char *const fmt, ...);
