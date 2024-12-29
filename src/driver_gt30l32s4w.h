@@ -139,48 +139,48 @@ typedef struct gt30l32s4w_info_s
 
 /**
  * @brief     initialize gt30l32s4w_handle_t structure
- * @param[in] HANDLE points to a gt30l32s4w handle structure
- * @param[in] STRUCTURE is gt30l32s4w_handle_t
+ * @param[in] HANDLE pointer to a gt30l32s4w handle structure
+ * @param[in] STRUCTURE gt30l32s4w_handle_t
  * @note      none
  */
 #define DRIVER_GT30L32S4W_LINK_INIT(HANDLE, STRUCTURE)         memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link spi_init function
- * @param[in] HANDLE points to a gt30l32s4w handle structure
- * @param[in] FUC points to a spi_init function address
+ * @param[in] HANDLE pointer to a gt30l32s4w handle structure
+ * @param[in] FUC pointer to a spi_init function address
  * @note      none
  */
 #define DRIVER_GT30L32S4W_LINK_SPI_INIT(HANDLE, FUC)          (HANDLE)->spi_init = FUC
 
 /**
  * @brief     link spi_deinit function
- * @param[in] HANDLE points to a gt30l32s4w handle structure
- * @param[in] FUC points to a spi_deinit function address
+ * @param[in] HANDLE pointer to a gt30l32s4w handle structure
+ * @param[in] FUC pointer to a spi_deinit function address
  * @note      none
  */
 #define DRIVER_GT30L32S4W_LINK_SPI_DEINIT(HANDLE, FUC)        (HANDLE)->spi_deinit = FUC
 
 /**
  * @brief     link spi_write_read function
- * @param[in] HANDLE points to a gt30l32s4w handle structure
- * @param[in] FUC points to a spi_write_read function address
+ * @param[in] HANDLE pointer to a gt30l32s4w handle structure
+ * @param[in] FUC pointer to a spi_write_read function address
  * @note      none
  */
 #define DRIVER_GT30L32S4W_LINK_SPI_WRITE_READ(HANDLE, FUC)    (HANDLE)->spi_write_read = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a gt30l32s4w handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a gt30l32s4w handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_GT30L32S4W_LINK_DELAY_MS(HANDLE, FUC)          (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a gt30l32s4w handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a gt30l32s4w handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_GT30L32S4W_LINK_DEBUG_PRINT(HANDLE, FUC)       (HANDLE)->debug_print = FUC
@@ -198,7 +198,7 @@ typedef struct gt30l32s4w_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to a gt30l32s4w info structure
+ * @param[out] *info pointer to a gt30l32s4w info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -208,8 +208,8 @@ uint8_t gt30l32s4w_info(gt30l32s4w_info_t *info);
 
 /**
  * @brief     set mode
- * @param[in] *handle points to a gt30l32s4w handle structure
- * @param[in] mode is the set mode
+ * @param[in] *handle pointer to a gt30l32s4w handle structure
+ * @param[in] mode set mode
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -220,8 +220,8 @@ uint8_t gt30l32s4w_set_mode(gt30l32s4w_handle_t *handle, gt30l32s4w_mode_t mode)
 
 /**
  * @brief      get mode
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[out] *mode points to a mode buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[out] *mode pointer to a mode buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -232,7 +232,7 @@ uint8_t gt30l32s4w_get_mode(gt30l32s4w_handle_t *handle, gt30l32s4w_mode_t *mode
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a gt30l32s4w handle structure
+ * @param[in] *handle pointer to a gt30l32s4w handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -245,7 +245,7 @@ uint8_t gt30l32s4w_init(gt30l32s4w_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a gt30l32s4w handle structure
+ * @param[in] *handle pointer to a gt30l32s4w handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -257,10 +257,10 @@ uint8_t gt30l32s4w_deinit(gt30l32s4w_handle_t *handle);
 
 /**
  * @brief     print pattern
- * @param[in] *handle points to a gt30l32s4w handle structure
- * @param[in] type is the pattern type
- * @param[in] *buf points to an input buffer
- * @param[in] len is the buffer length
+ * @param[in] *handle pointer to a gt30l32s4w handle structure
+ * @param[in] type pattern type
+ * @param[in] *buf pointer to an input buffer
+ * @param[in] len buffer length
  * @return    status code
  *            - 0 success
  *            - 1 print pattern failed
@@ -273,9 +273,9 @@ uint8_t gt30l32s4w_print_pattern(gt30l32s4w_handle_t *handle, gt30l32s4w_type_t 
 
 /**
  * @brief      read char 12x12
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char 12x12 failed
@@ -288,9 +288,9 @@ uint8_t gt30l32s4w_read_char_12x12(gt30l32s4w_handle_t *handle, uint16_t ch, uin
 
 /**
  * @brief      read char 15x16
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char 15x16 failed
@@ -303,9 +303,9 @@ uint8_t gt30l32s4w_read_char_15x16(gt30l32s4w_handle_t *handle, uint16_t ch, uin
 
 /**
  * @brief      read char 24x24
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char 24x24 failed
@@ -318,9 +318,9 @@ uint8_t gt30l32s4w_read_char_24x24(gt30l32s4w_handle_t *handle, uint16_t ch, uin
 
 /**
  * @brief      read char 32x32
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char 32x32 failed
@@ -333,9 +333,9 @@ uint8_t gt30l32s4w_read_char_32x32(gt30l32s4w_handle_t *handle, uint16_t ch, uin
 
 /**
  * @brief      read char extend 6x12
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char extend 6x12 failed
@@ -348,9 +348,9 @@ uint8_t gt30l32s4w_read_char_extend_6x12(gt30l32s4w_handle_t *handle, uint16_t c
 
 /**
  * @brief      read char extend 8x16
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char extend 8x16 failed
@@ -363,9 +363,9 @@ uint8_t gt30l32s4w_read_char_extend_8x16(gt30l32s4w_handle_t *handle, uint16_t c
 
 /**
  * @brief      read char special 8x16
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char special 8x16 failed
@@ -378,9 +378,9 @@ uint8_t gt30l32s4w_read_char_special_8x16(gt30l32s4w_handle_t *handle, uint16_t 
 
 /**
  * @brief      read char extend 12x24
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char extend 12x24 failed
@@ -393,9 +393,9 @@ uint8_t gt30l32s4w_read_char_extend_12x24(gt30l32s4w_handle_t *handle, uint16_t 
 
 /**
  * @brief      read char extend 16x32
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read char extend 16x32 failed
@@ -408,9 +408,9 @@ uint8_t gt30l32s4w_read_char_extend_16x32(gt30l32s4w_handle_t *handle, uint16_t 
 
 /**
  * @brief      read ascii 5x7
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 5x7 failed
@@ -423,9 +423,9 @@ uint8_t gt30l32s4w_read_ascii_5x7(gt30l32s4w_handle_t *handle, uint16_t ch, uint
 
 /**
  * @brief      read ascii 7x8
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 7x8 failed
@@ -438,9 +438,9 @@ uint8_t gt30l32s4w_read_ascii_7x8(gt30l32s4w_handle_t *handle, uint16_t ch, uint
 
 /**
  * @brief      read ascii 6x12
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 6x12 failed
@@ -453,9 +453,9 @@ uint8_t gt30l32s4w_read_ascii_6x12(gt30l32s4w_handle_t *handle, uint16_t ch, uin
 
 /**
  * @brief      read ascii 8x16
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 8x16 failed
@@ -468,9 +468,9 @@ uint8_t gt30l32s4w_read_ascii_8x16(gt30l32s4w_handle_t *handle, uint16_t ch, uin
 
 /**
  * @brief      read ascii 12x24
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 12x24 failed
@@ -483,9 +483,9 @@ uint8_t gt30l32s4w_read_ascii_12x24(gt30l32s4w_handle_t *handle, uint16_t ch, ui
 
 /**
  * @brief      read ascii 16x32
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii 16x32 failed
@@ -498,9 +498,9 @@ uint8_t gt30l32s4w_read_ascii_16x32(gt30l32s4w_handle_t *handle, uint16_t ch, ui
 
 /**
  * @brief      read ascii arial 12
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii arial 12 failed
@@ -513,9 +513,9 @@ uint8_t gt30l32s4w_read_ascii_arial_12(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii times 12
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii times 12 failed
@@ -528,9 +528,9 @@ uint8_t gt30l32s4w_read_ascii_times_12(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii arial 16
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii arial 16 failed
@@ -543,9 +543,9 @@ uint8_t gt30l32s4w_read_ascii_arial_16(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii times 16
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii times 16 failed
@@ -558,9 +558,9 @@ uint8_t gt30l32s4w_read_ascii_times_16(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii arial 24
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii arial 24 failed
@@ -573,9 +573,9 @@ uint8_t gt30l32s4w_read_ascii_arial_24(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii times 24
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii times 24 failed
@@ -588,9 +588,9 @@ uint8_t gt30l32s4w_read_ascii_times_24(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii arial 32
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii arial 32 failed
@@ -603,9 +603,9 @@ uint8_t gt30l32s4w_read_ascii_arial_32(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      read ascii times 32
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  ch is the read char
- * @param[out] *buf points to an output buffer
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  ch read char
+ * @param[out] *buf pointer to an output buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ascii times 32 failed
@@ -629,11 +629,11 @@ uint8_t gt30l32s4w_read_ascii_times_32(gt30l32s4w_handle_t *handle, uint16_t ch,
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to a gt30l32s4w handle structure
- * @param[in]  *in_buf points to an input buffer
- * @param[in]  in_len is the input buffer length
- * @param[out] *out_buf points to an output buffer
- * @param[in]  out_len is the output buffer length
+ * @param[in]  *handle pointer to a gt30l32s4w handle structure
+ * @param[in]  *in_buf pointer to an input buffer
+ * @param[in]  in_len input buffer length
+ * @param[out] *out_buf pointer to an output buffer
+ * @param[in]  out_len output buffer length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
