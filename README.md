@@ -10,7 +10,7 @@
 
 GT30L32S4W is a Chinese character library chip that includes 12x12 dot matrix, 16x16 dot matrix, 24x24 dot matrix, and 32x32 dot matrix. It supports GB2312 national standard Chinese characters (including legal authorization from the National Information and Standardization Commission) and ASCII characters. The arrangement format is horizontal. Users can use the method provided in this manual to calculate the address of the character matrix in the chip through the character internal code, and continuously read the character matrix information from this address.
 
-LibDriver GT30L32S4W is the full function driver of GT30L32S4W launched by LibDriver.It provides the function of dot matrix reading. LibDriver is MISRA compliant.
+LibDriver GT30L32S4W is a full-featured driver of GT30L32S4W launched by LibDriver.It provides the function of dot matrix reading. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
