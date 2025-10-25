@@ -58,7 +58,7 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
    gt30l32s4w (-p | --port)
    ```
 
-5. Run gt30l32s4w read test.
+4. Run gt30l32s4w read test.
 
    ```shell
    gt30l32s4w (-t read | --test=read)
